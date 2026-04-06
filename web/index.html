@@ -3,13 +3,40 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet" />
-    <title>Ox Inventory</title>
+    <title>ox_inventory</title>
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
+    <main id="app" class="app hidden">
+      <section class="panel" data-side="left">
+        <header class="panel-header">
+          <h2 id="left-title">Inventory</h2>
+          <div id="left-weight" class="weight"></div>
+        </header>
+        <div id="left-grid" class="grid"></div>
+      </section>
+
+      <section class="controls">
+        <input id="amount" type="number" min="0" value="0" />
+        <button id="use-btn">Use</button>
+        <button id="give-btn">Give</button>
+        <button id="close-btn">Close</button>
+        <p class="hint">Ctrl+Click: Drop • Alt+Click: Use • Right click: Context</p>
+      </section>
+
+      <section class="panel" data-side="right">
+        <header class="panel-header">
+          <h2 id="right-title">Target</h2>
+          <div id="right-weight" class="weight"></div>
+        </header>
+        <div id="right-grid" class="grid"></div>
+      </section>
+    </main>
+
+    <aside id="hotbar" class="hotbar hidden"></aside>
+    <aside id="tooltip" class="tooltip hidden"></aside>
+    <aside id="context" class="context hidden"></aside>
+
+    <script src="script.js"></script>
   </body>
 </html>

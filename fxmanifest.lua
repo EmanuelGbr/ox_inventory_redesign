@@ -30,15 +30,15 @@ server_scripts {
 
 client_script 'init.lua'
 
-ui_page 'web/build/index.html'
+ui_page 'web/index.html'
 
 files {
     'client.lua',
     'server.lua',
     'locales/*.json',
-    'web/build/index.html',
-    'web/build/assets/*.js',
-    'web/build/assets/*.css',
+    'web/index.html',
+    'web/style.css',
+    'web/script.js',
     'web/images/*.png',
     'modules/**/shared.lua',
     'modules/**/client.lua',
